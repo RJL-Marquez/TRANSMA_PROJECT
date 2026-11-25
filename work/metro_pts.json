@@ -1,0 +1,162 @@
+{
+ "1": {
+  "d1_m": 0.0,
+  "lat": 14.6090861,
+  "lon": 120.9921528,
+  "ground": 2.47,
+  "floors": 23,
+  "note": "Frassati Building rooftop (group pin)"
+ },
+ "2": {
+  "d1_m": 355.6,
+  "lat": 14.6122888,
+  "lon": 120.9918801,
+  "ground": 2.55,
+  "floors": 6,
+  "note": "mid-rise block east of the tall towers, satellite estimate"
+ },
+ "3": {
+  "d1_m": 747.2,
+  "lat": 14.6158158,
+  "lon": 120.9915799,
+  "ground": 2.74,
+  "floors": 3,
+  "note": "low-rise residential, satellite estimate"
+ },
+ "4": {
+  "d1_m": 1083.7,
+  "lat": 14.6188473,
+  "lon": 120.9913219,
+  "ground": 3.55,
+  "floors": 3,
+  "note": "commercial building east of the highway, satellite estimate"
+ },
+ "5": {
+  "d1_m": 1483.3,
+  "lat": 14.6224464,
+  "lon": 120.9910154,
+  "ground": 3.52,
+  "floors": 3,
+  "note": "low-rise residential, satellite estimate"
+ },
+ "6": {
+  "d1_m": 1802.9,
+  "lat": 14.6253249,
+  "lon": 120.9907704,
+  "ground": 4.79,
+  "floors": 3,
+  "note": "low-rise block north of the Maranatha/PMCC tower, satellite estimate"
+ },
+ "7": {
+  "d1_m": 2199.5,
+  "lat": 14.6288968,
+  "lon": 120.9904664,
+  "ground": 6.68,
+  "floors": 2,
+  "note": "low-rise beside A. Bonifacio Ave, satellite estimate"
+ },
+ "8": {
+  "d1_m": 2538.1,
+  "lat": 14.6319464,
+  "lon": 120.9902068,
+  "ground": 10.78,
+  "floors": 0,
+  "note": "La Loma Cemetery, open ground"
+ },
+ "9": {
+  "d1_m": 2937.6,
+  "lat": 14.6355454,
+  "lon": 120.9899004,
+  "ground": 14.7,
+  "floors": 1,
+  "note": "cemetery mausoleum, about one storey"
+ },
+ "10": {
+  "d1_m": 3254.2,
+  "lat": 14.6383969,
+  "lon": 120.9896577,
+  "ground": 13.48,
+  "floors": 3,
+  "note": "three-storey row house, satellite estimate"
+ },
+ "11": {
+  "d1_m": 3615.8,
+  "lat": 14.6416536,
+  "lon": 120.9893805,
+  "ground": 15.69,
+  "floors": 2,
+  "note": "houses at the east edge of the cemetery, satellite estimate"
+ },
+ "12": {
+  "d1_m": 4017.4,
+  "lat": 14.6452706,
+  "lon": 120.9890725,
+  "ground": 17.33,
+  "floors": 3,
+  "note": "three-storey block south of the warehouses, satellite estimate"
+ },
+ "13": {
+  "d1_m": 4360.0,
+  "lat": 14.6483563,
+  "lon": 120.9888099,
+  "ground": 18.17,
+  "floors": 3,
+  "note": "beside a tall warehouse west of Caloocan City Hall; warehouse counted as 3 floors"
+ },
+ "14": {
+  "d1_m": 4764.5,
+  "lat": 14.6520003,
+  "lon": 120.9884997,
+  "ground": 17.59,
+  "floors": 4,
+  "note": "commercial building near CAI Sports Center, satellite estimate (taken high)"
+ },
+ "15": {
+  "d1_m": 5092.1,
+  "lat": 14.6549508,
+  "lon": 120.9882485,
+  "ground": 18.15,
+  "floors": 3,
+  "note": "line follows a street here; the street-front buildings (about 3 floors) are counted"
+ },
+ "16": {
+  "d1_m": 5477.7,
+  "lat": 14.6584238,
+  "lon": 120.9879529,
+  "ground": 19.63,
+  "floors": 3,
+  "note": "row houses east of MCU Hospital, satellite estimate"
+ },
+ "17": {
+  "d1_m": 5825.3,
+  "lat": 14.6615544,
+  "lon": 120.9876864,
+  "ground": 20.48,
+  "floors": 4,
+  "note": "white mid-rise north of EDSA, satellite estimate (taken high)"
+ },
+ "18": {
+  "d1_m": 6172.9,
+  "lat": 14.664685,
+  "lon": 120.9874199,
+  "ground": 11.63,
+  "floors": 3,
+  "note": "large house in a gated subdivision, satellite estimate"
+ },
+ "19": {
+  "d1_m": 6542.4,
+  "lat": 14.6680139,
+  "lon": 120.9871365,
+  "ground": 3.63,
+  "floors": 2,
+  "note": "two-storey house south of the Tullahan River, satellite estimate"
+ },
+ "20": {
+  "d1_m": 6927.011124423781,
+  "lat": 14.671477777777778,
+  "lon": 120.98684166666666,
+  "ground": 10.98,
+  "floors": 5,
+  "note": "Metro Industries, 84 Ramon Delfin St (Site B)"
+ }
+}

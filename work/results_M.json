@@ -1,0 +1,822 @@
+{
+ "common": {
+  "lam": 0.0283,
+  "ad_lin": 39927.47850457556,
+  "ad_db": 46.01271884546299,
+  "theta": 1.1005555555555555,
+  "ap_theory": 43.41634574040543,
+  "fsl": 129.75573381119625,
+  "pin": 33.01029995663981,
+  "wg_db_m": 0.09826115485564305,
+  "d_m": 6927.011124423781,
+  "d_km": 6.927011124423782,
+  "fc": 10.59625
+ },
+ "rows": [
+  {
+   "n": 1,
+   "d1": 0.0,
+   "d2": 6.927011124423782,
+   "ground": 2.47,
+   "floors": 23,
+   "obstruction": 57.5,
+   "elev": 59.97,
+   "bulge": 0.0,
+   "f1": 0.0,
+   "f60": 0.0,
+   "the": 59.97,
+   "lat": "14°36'32.71\"N",
+   "lon": "120°59'31.75\"E",
+   "desc": "Frassati Building rooftop (group pin)",
+   "evidence": "Frassati Building rooftop (group pin)"
+  },
+  {
+   "n": 2,
+   "d1": 0.3556,
+   "d2": 6.571411124423782,
+   "ground": 2.55,
+   "floors": 6,
+   "obstruction": 15.0,
+   "elev": 17.55,
+   "bulge": 0.18327794477216447,
+   "f1": 3.086791231930652,
+   "f60": 1.852074739158391,
+   "the": 19.585352683930555,
+   "lat": "14°36'44.24\"N",
+   "lon": "120°59'30.77\"E",
+   "desc": "mid-rise block east of the tall towers, satellite estimate",
+   "evidence": "mid-rise block east of the tall towers, satellite estimate"
+  },
+  {
+   "n": 3,
+   "d1": 0.7472,
+   "d2": 6.179811124423781,
+   "ground": 2.74,
+   "floors": 3,
+   "obstruction": 7.5,
+   "elev": 10.24,
+   "bulge": 0.36216116644466273,
+   "f1": 4.339134328815861,
+   "f60": 2.6034805972895168,
+   "the": 13.20564176373418,
+   "lat": "14°36'56.94\"N",
+   "lon": "120°59'29.69\"E",
+   "desc": "low-rise residential, satellite estimate",
+   "evidence": "low-rise residential, satellite estimate"
+  },
+  {
+   "n": 4,
+   "d1": 1.0837,
+   "d2": 5.843311124423781,
+   "ground": 3.55,
+   "floors": 3,
+   "obstruction": 7.5,
+   "elev": 11.05,
+   "bulge": 0.49665853063043547,
+   "f1": 5.081373338493143,
+   "f60": 3.0488240030958855,
+   "the": 14.595482533726322,
+   "lat": "14°37'07.85\"N",
+   "lon": "120°59'28.76\"E",
+   "desc": "commercial building east of the highway, satellite estimate",
+   "evidence": "commercial building east of the highway, satellite estimate"
+  },
+  {
+   "n": 5,
+   "d1": 1.4833,
+   "d2": 5.443711124423782,
+   "ground": 3.52,
+   "floors": 3,
+   "obstruction": 7.5,
+   "elev": 11.02,
+   "bulge": 0.6333064086947292,
+   "f1": 5.737980874061576,
+   "f60": 3.4427885244369456,
+   "the": 15.096094933131674,
+   "lat": "14°37'20.81\"N",
+   "lon": "120°59'27.66\"E",
+   "desc": "low-rise residential, satellite estimate",
+   "evidence": "low-rise residential, satellite estimate"
+  },
+  {
+   "n": 6,
+   "d1": 1.8029,
+   "d2": 5.124111124423782,
+   "ground": 4.79,
+   "floors": 3,
+   "obstruction": 7.5,
+   "elev": 12.29,
+   "bulge": 0.7245694075469519,
+   "f1": 6.137509136432666,
+   "f60": 3.6825054818595993,
+   "the": 16.69707488940655,
+   "lat": "14°37'31.17\"N",
+   "lon": "120°59'26.77\"E",
+   "desc": "low-rise block north of the Maranatha/PMCC tower, satellite estimate",
+   "evidence": "low-rise block north of the Maranatha/PMCC tower, satellite estimate"
+  },
+  {
+   "n": 7,
+   "d1": 2.1995,
+   "d2": 4.727511124423781,
+   "ground": 6.68,
+   "floors": 2,
+   "obstruction": 5.0,
+   "elev": 11.68,
+   "bulge": 0.815542017111381,
+   "f1": 6.51141424642158,
+   "f60": 3.906848547852948,
+   "the": 16.40239056496433,
+   "lat": "14°37'44.03\"N",
+   "lon": "120°59'25.68\"E",
+   "desc": "low-rise beside A. Bonifacio Ave, satellite estimate",
+   "evidence": "low-rise beside A. Bonifacio Ave, satellite estimate"
+  },
+  {
+   "n": 8,
+   "d1": 2.5381,
+   "d2": 4.388911124423782,
+   "ground": 10.78,
+   "floors": 0,
+   "obstruction": 0.0,
+   "elev": 10.78,
+   "bulge": 0.8736859078352941,
+   "f1": 6.739533250031755,
+   "f60": 4.043719950019053,
+   "the": 15.697405857854346,
+   "lat": "14°37'55.01\"N",
+   "lon": "120°59'24.74\"E",
+   "desc": "La Loma Cemetery, open ground",
+   "evidence": "La Loma Cemetery, open ground"
+  },
+  {
+   "n": 9,
+   "d1": 2.9376,
+   "d2": 3.9894111244237815,
+   "ground": 14.7,
+   "floors": 1,
+   "obstruction": 2.5,
+   "elev": 17.2,
+   "bulge": 0.9191603230672394,
+   "f1": 6.912701270631526,
+   "f60": 4.147620762378915,
+   "the": 22.266781085446155,
+   "lat": "14°38'07.96\"N",
+   "lon": "120°59'23.64\"E",
+   "desc": "cemetery mausoleum, about one storey",
+   "evidence": "cemetery mausoleum, about one storey"
+  },
+  {
+   "n": 10,
+   "d1": 3.2542,
+   "d2": 3.6728111244237818,
+   "ground": 13.48,
+   "floors": 3,
+   "obstruction": 7.5,
+   "elev": 20.98,
+   "bulge": 0.9374166243999899,
+   "f1": 6.98101354189225,
+   "f60": 4.1886081251353495,
+   "the": 26.10602474953534,
+   "lat": "14°38'18.23\"N",
+   "lon": "120°59'22.77\"E",
+   "desc": "three-storey row house, satellite estimate",
+   "evidence": "three-storey row house, satellite estimate"
+  },
+  {
+   "n": 11,
+   "d1": 3.6158,
+   "d2": 3.3112111244237816,
+   "ground": 15.69,
+   "floors": 2,
+   "obstruction": 5.0,
+   "elev": 20.689999999999998,
+   "bulge": 0.9390335046032557,
+   "f1": 6.9870314635227375,
+   "f60": 4.192218878113643,
+   "the": 25.821252382716896,
+   "lat": "14°38'29.95\"N",
+   "lon": "120°59'21.77\"E",
+   "desc": "houses at the east edge of the cemetery, satellite estimate",
+   "evidence": "houses at the east edge of the cemetery, satellite estimate"
+  },
+  {
+   "n": 12,
+   "d1": 4.0174,
+   "d2": 2.9096111244237814,
+   "ground": 17.33,
+   "floors": 3,
+   "obstruction": 7.5,
+   "elev": 24.83,
+   "bulge": 0.9167899397066744,
+   "f1": 6.9037820813290836,
+   "f60": 4.14226924879745,
+   "the": 29.889059188504124,
+   "lat": "14°38'42.97\"N",
+   "lon": "120°59'20.66\"E",
+   "desc": "three-storey block south of the warehouses, satellite estimate",
+   "evidence": "three-storey block south of the warehouses, satellite estimate"
+  },
+  {
+   "n": 13,
+   "d1": 4.36,
+   "d2": 2.5670111244237814,
+   "ground": 18.17,
+   "floors": 3,
+   "obstruction": 7.5,
+   "elev": 25.67,
+   "bulge": 0.8778171374500147,
+   "f1": 6.7554484223249815,
+   "f60": 4.053269053394989,
+   "the": 30.601086190845006,
+   "lat": "14°38'54.08\"N",
+   "lon": "120°59'19.72\"E",
+   "desc": "beside a tall warehouse west of Caloocan City Hall; warehouse counted as 3 floors",
+   "evidence": "beside a tall warehouse west of Caloocan City Hall; warehouse counted as 3 floors"
+  },
+  {
+   "n": 14,
+   "d1": 4.7645,
+   "d2": 2.162511124423782,
+   "ground": 17.59,
+   "floors": 4,
+   "obstruction": 10.0,
+   "elev": 27.59,
+   "bulge": 0.8081007256719301,
+   "f1": 6.48163995919703,
+   "f60": 3.888983975518218,
+   "the": 32.287084701190146,
+   "lat": "14°39'07.20\"N",
+   "lon": "120°59'18.60\"E",
+   "desc": "commercial building near CAI Sports Center, satellite estimate (taken high)",
+   "evidence": "commercial building near CAI Sports Center, satellite estimate (taken high)"
+  },
+  {
+   "n": 15,
+   "d1": 5.0921,
+   "d2": 1.8349111244237815,
+   "ground": 18.15,
+   "floors": 3,
+   "obstruction": 7.5,
+   "elev": 25.65,
+   "bulge": 0.7328275244453599,
+   "f1": 6.172385484307034,
+   "f60": 3.70343129058422,
+   "the": 30.086258815029577,
+   "lat": "14°39'17.82\"N",
+   "lon": "120°59'17.69\"E",
+   "desc": "line follows a street here; the street-front buildings (about 3 floors) are counted",
+   "evidence": "line follows a street here; the street-front buildings (about 3 floors) are counted"
+  },
+  {
+   "n": 16,
+   "d1": 5.4777,
+   "d2": 1.4493111244237822,
+   "ground": 19.63,
+   "floors": 3,
+   "obstruction": 7.5,
+   "elev": 27.13,
+   "bulge": 0.6226581604906786,
+   "f1": 5.689537929787644,
+   "f60": 3.4137227578725864,
+   "the": 31.166380918363267,
+   "lat": "14°39'30.33\"N",
+   "lon": "120°59'16.63\"E",
+   "desc": "row houses east of MCU Hospital, satellite estimate",
+   "evidence": "row houses east of MCU Hospital, satellite estimate"
+  },
+  {
+   "n": 17,
+   "d1": 5.8253,
+   "d2": 1.1017111244237814,
+   "ground": 20.48,
+   "floors": 4,
+   "obstruction": 10.0,
+   "elev": 30.48,
+   "bulge": 0.5033566912239885,
+   "f1": 5.115523427750987,
+   "f60": 3.069314056650592,
+   "the": 34.05267074787458,
+   "lat": "14°39'41.60\"N",
+   "lon": "120°59'15.67\"E",
+   "desc": "white mid-rise north of EDSA, satellite estimate (taken high)",
+   "evidence": "white mid-rise north of EDSA, satellite estimate (taken high)"
+  },
+  {
+   "n": 18,
+   "d1": 6.1729,
+   "d2": 0.7541111244237815,
+   "ground": 11.63,
+   "floors": 3,
+   "obstruction": 7.5,
+   "elev": 19.130000000000003,
+   "bulge": 0.365102161565142,
+   "f1": 4.3567170667977155,
+   "f60": 2.614030240078629,
+   "the": 22.109132401643777,
+   "lat": "14°39'52.87\"N",
+   "lon": "120°59'14.71\"E",
+   "desc": "large house in a gated subdivision, satellite estimate",
+   "evidence": "large house in a gated subdivision, satellite estimate"
+  },
+  {
+   "n": 19,
+   "d1": 6.5424,
+   "d2": 0.384611124423782,
+   "ground": 3.63,
+   "floors": 2,
+   "obstruction": 5.0,
+   "elev": 8.629999999999999,
+   "bulge": 0.19735528003373737,
+   "f1": 3.2031444919725374,
+   "f60": 1.9218866951835223,
+   "the": 10.749241975217258,
+   "lat": "14°40'04.85\"N",
+   "lon": "120°59'13.69\"E",
+   "desc": "two-storey house south of the Tullahan River, satellite estimate",
+   "evidence": "two-storey house south of the Tullahan River, satellite estimate"
+  },
+  {
+   "n": 20,
+   "d1": 6.927011124423782,
+   "d2": 0.0,
+   "ground": 10.98,
+   "floors": 5,
+   "obstruction": 12.5,
+   "elev": 23.48,
+   "bulge": 0.0,
+   "f1": 0.0,
+   "f60": 0.0,
+   "the": 23.48,
+   "lat": "14°40'17.32\"N",
+   "lon": "120°59'12.63\"E",
+   "desc": "Metro Industries, 84 Ramon Delfin St (Site B)",
+   "evidence": "Metro Industries, 84 Ramon Delfin St (Site B)"
+  }
+ ],
+ "main": {
+  "hmin": 59.97,
+  "governing": 1,
+  "tilted": true,
+  "h_ant_a": 59.97,
+  "h_ant_b": 29.151050238644075,
+  "tilt_point": {
+   "name": "P17",
+   "d1": 5.8253,
+   "the": 34.05267074787458
+  },
+  "extras": [
+   {
+    "n": "M",
+    "d1": 1.667,
+    "d2": 5.260011124423782,
+    "ground": 4.35,
+    "floors": 9,
+    "obstruction": 22.5,
+    "elev": 26.85,
+    "bulge": 0.6877206701501525,
+    "f1": 5.979408076802745,
+    "f60": 3.587644846081647,
+    "the": 31.125365516231803,
+    "name": "M",
+    "label": "Maranatha/PMCC tower (9 floors, corner about 5 m east of the line)"
+   },
+   {
+    "n": "L",
+    "d1": 5.3531,
+    "d2": 1.5739111244237813,
+    "ground": 19.31,
+    "floors": 5,
+    "obstruction": 12.5,
+    "elev": 31.81,
+    "bulge": 0.6608081286394467,
+    "f1": 5.8612445671997575,
+    "f60": 3.5167467403198542,
+    "the": 35.9875548689593,
+    "name": "L",
+    "label": "LRT-1 viaduct on EDSA with a train on it (about 12.5 m, taken as 5 floors)"
+   }
+  ],
+  "tilt_deg": 0.2549128430393688,
+  "clearance": [
+   {
+    "name": "P1",
+    "d1": 0.0,
+    "the": 59.97,
+    "line": 59.97,
+    "margin": 0.0
+   },
+   {
+    "name": "P2",
+    "d1": 0.3556,
+    "the": 19.585352683930555,
+    "line": 58.387900832222236,
+    "margin": 38.80254814829168
+   },
+   {
+    "name": "P3",
+    "d1": 0.7472,
+    "the": 13.20564176373418,
+    "line": 56.64563414464695,
+    "margin": 43.43999238091277
+   },
+   {
+    "name": "P4",
+    "d1": 1.0837,
+    "the": 14.595482533726322,
+    "line": 55.148512744317316,
+    "margin": 40.55303021059099
+   },
+   {
+    "name": "P5",
+    "d1": 1.4833,
+    "the": 15.096094933131674,
+    "line": 53.3706532745648,
+    "margin": 38.27455834143313
+   },
+   {
+    "name": "M",
+    "d1": 1.667,
+    "the": 31.125365516231803,
+    "line": 52.55335401382022,
+    "margin": 21.427988497588416
+   },
+   {
+    "name": "P6",
+    "d1": 1.8029,
+    "the": 16.69707488940655,
+    "line": 51.948721626584565,
+    "margin": 35.251646737178014
+   },
+   {
+    "name": "P7",
+    "d1": 2.1995,
+    "the": 16.40239056496433,
+    "line": 50.184209450148515,
+    "margin": 33.78181888518419
+   },
+   {
+    "name": "P8",
+    "d1": 2.5381,
+    "the": 15.697405857854346,
+    "line": 48.67774494449736,
+    "margin": 32.98033908664301
+   },
+   {
+    "name": "P9",
+    "d1": 2.9376,
+    "the": 22.266781085446155,
+    "line": 46.900330384522064,
+    "margin": 24.63354929907591
+   },
+   {
+    "name": "P10",
+    "d1": 3.2542,
+    "the": 26.10602474953534,
+    "line": 45.491746029858284,
+    "margin": 19.385721280322944
+   },
+   {
+    "name": "P11",
+    "d1": 3.6158,
+    "the": 25.821252382716896,
+    "line": 43.8829522754476,
+    "margin": 18.061699892730704
+   },
+   {
+    "name": "P12",
+    "d1": 4.0174,
+    "the": 29.889059188504124,
+    "line": 42.096194610150775,
+    "margin": 12.207135421646651
+   },
+   {
+    "name": "P13",
+    "d1": 4.36,
+    "the": 30.601086190845006,
+    "line": 40.57193371341101,
+    "margin": 9.970847522566007
+   },
+   {
+    "name": "P14",
+    "d1": 4.7645,
+    "the": 32.287084701190146,
+    "line": 38.77227366457495,
+    "margin": 6.485188963384807
+   },
+   {
+    "name": "P15",
+    "d1": 5.0921,
+    "the": 30.086258815029577,
+    "line": 37.31474923441748,
+    "margin": 7.228490419387899
+   },
+   {
+    "name": "L",
+    "d1": 5.3531,
+    "the": 35.9875548689593,
+    "line": 36.15353471588543,
+    "margin": 0.16597984692612755
+   },
+   {
+    "name": "P16",
+    "d1": 5.4777,
+    "the": 31.166380918363267,
+    "line": 35.59917713347512,
+    "margin": 4.432796215111857
+   },
+   {
+    "name": "P17",
+    "d1": 5.8253,
+    "the": 34.05267074787458,
+    "line": 34.05267074787458,
+    "margin": 0.0
+   },
+   {
+    "name": "P18",
+    "d1": 6.1729,
+    "the": 22.109132401643777,
+    "line": 32.50616436227405,
+    "margin": 10.397031960630272
+   },
+   {
+    "name": "P19",
+    "d1": 6.5424,
+    "the": 10.749241975217258,
+    "line": 30.86222273546335,
+    "margin": 20.112980760246096
+   },
+   {
+    "name": "P20",
+    "d1": 6.927011124423782,
+    "the": 23.48,
+    "line": 29.151050238644075,
+    "margin": 5.671050238644074
+   }
+  ],
+  "flat_tower_b": 36.489999999999995,
+  "tower_a": 0.0,
+  "tower_b": 5.671050238644074,
+  "len_a": 3.0,
+  "len_b": 8.671050238644074,
+  "wg_a": 0.29478346456692917,
+  "wg_b": 0.852027410260466,
+  "conn": 1.42,
+  "g_total": 110.4331891251726,
+  "rsl_out": 13.687755270616151,
+  "rsl_in": -11.312244729383849,
+  "rsl_ref": 12.520446751427045,
+  "n": -109.9978290702777,
+  "pth": -97.7978290702777,
+  "fm": 111.48558434089385,
+  "fm_in": 86.48558434089385,
+  "fm_base": -29.76088893838937,
+  "fm_theory": {
+   "99": -9.760888938389375,
+   "99.9": 0.2391110616111085,
+   "99.99": 10.239111061606287,
+   "99.999": 20.23911106158218
+  },
+  "unreliability": 7.505034138366249e-15,
+  "fiber_len": 8.97,
+  "fiber_loss": 1.9734,
+  "micro_loss": 132.32254468602363
+ },
+ "alt": {
+  "hmin": 59.97,
+  "governing": 1,
+  "tilted": true,
+  "h_ant_a": 59.97,
+  "h_ant_b": 29.151050238644075,
+  "tilt_point": {
+   "name": "P17",
+   "d1": 5.8253,
+   "the": 34.05267074787458
+  },
+  "extras": [
+   {
+    "n": "M",
+    "d1": 1.667,
+    "d2": 5.260011124423782,
+    "ground": 4.35,
+    "floors": 9,
+    "obstruction": 22.5,
+    "elev": 26.85,
+    "bulge": 0.6877206701501525,
+    "f1": 5.979408076802745,
+    "f60": 3.587644846081647,
+    "the": 31.125365516231803,
+    "name": "M",
+    "label": "Maranatha/PMCC tower (9 floors, corner about 5 m east of the line)"
+   },
+   {
+    "n": "L",
+    "d1": 5.3531,
+    "d2": 1.5739111244237813,
+    "ground": 19.31,
+    "floors": 5,
+    "obstruction": 12.5,
+    "elev": 31.81,
+    "bulge": 0.6608081286394467,
+    "f1": 5.8612445671997575,
+    "f60": 3.5167467403198542,
+    "the": 35.9875548689593,
+    "name": "L",
+    "label": "LRT-1 viaduct on EDSA with a train on it (about 12.5 m, taken as 5 floors)"
+   }
+  ],
+  "tilt_deg": 0.2549128430393688,
+  "clearance": [
+   {
+    "name": "P1",
+    "d1": 0.0,
+    "the": 59.97,
+    "line": 59.97,
+    "margin": 0.0
+   },
+   {
+    "name": "P2",
+    "d1": 0.3556,
+    "the": 19.585352683930555,
+    "line": 58.387900832222236,
+    "margin": 38.80254814829168
+   },
+   {
+    "name": "P3",
+    "d1": 0.7472,
+    "the": 13.20564176373418,
+    "line": 56.64563414464695,
+    "margin": 43.43999238091277
+   },
+   {
+    "name": "P4",
+    "d1": 1.0837,
+    "the": 14.595482533726322,
+    "line": 55.148512744317316,
+    "margin": 40.55303021059099
+   },
+   {
+    "name": "P5",
+    "d1": 1.4833,
+    "the": 15.096094933131674,
+    "line": 53.3706532745648,
+    "margin": 38.27455834143313
+   },
+   {
+    "name": "M",
+    "d1": 1.667,
+    "the": 31.125365516231803,
+    "line": 52.55335401382022,
+    "margin": 21.427988497588416
+   },
+   {
+    "name": "P6",
+    "d1": 1.8029,
+    "the": 16.69707488940655,
+    "line": 51.948721626584565,
+    "margin": 35.251646737178014
+   },
+   {
+    "name": "P7",
+    "d1": 2.1995,
+    "the": 16.40239056496433,
+    "line": 50.184209450148515,
+    "margin": 33.78181888518419
+   },
+   {
+    "name": "P8",
+    "d1": 2.5381,
+    "the": 15.697405857854346,
+    "line": 48.67774494449736,
+    "margin": 32.98033908664301
+   },
+   {
+    "name": "P9",
+    "d1": 2.9376,
+    "the": 22.266781085446155,
+    "line": 46.900330384522064,
+    "margin": 24.63354929907591
+   },
+   {
+    "name": "P10",
+    "d1": 3.2542,
+    "the": 26.10602474953534,
+    "line": 45.491746029858284,
+    "margin": 19.385721280322944
+   },
+   {
+    "name": "P11",
+    "d1": 3.6158,
+    "the": 25.821252382716896,
+    "line": 43.8829522754476,
+    "margin": 18.061699892730704
+   },
+   {
+    "name": "P12",
+    "d1": 4.0174,
+    "the": 29.889059188504124,
+    "line": 42.096194610150775,
+    "margin": 12.207135421646651
+   },
+   {
+    "name": "P13",
+    "d1": 4.36,
+    "the": 30.601086190845006,
+    "line": 40.57193371341101,
+    "margin": 9.970847522566007
+   },
+   {
+    "name": "P14",
+    "d1": 4.7645,
+    "the": 32.287084701190146,
+    "line": 38.77227366457495,
+    "margin": 6.485188963384807
+   },
+   {
+    "name": "P15",
+    "d1": 5.0921,
+    "the": 30.086258815029577,
+    "line": 37.31474923441748,
+    "margin": 7.228490419387899
+   },
+   {
+    "name": "L",
+    "d1": 5.3531,
+    "the": 35.9875548689593,
+    "line": 36.15353471588543,
+    "margin": 0.16597984692612755
+   },
+   {
+    "name": "P16",
+    "d1": 5.4777,
+    "the": 31.166380918363267,
+    "line": 35.59917713347512,
+    "margin": 4.432796215111857
+   },
+   {
+    "name": "P17",
+    "d1": 5.8253,
+    "the": 34.05267074787458,
+    "line": 34.05267074787458,
+    "margin": 0.0
+   },
+   {
+    "name": "P18",
+    "d1": 6.1729,
+    "the": 22.109132401643777,
+    "line": 32.50616436227405,
+    "margin": 10.397031960630272
+   },
+   {
+    "name": "P19",
+    "d1": 6.5424,
+    "the": 10.749241975217258,
+    "line": 30.86222273546335,
+    "margin": 20.112980760246096
+   },
+   {
+    "name": "P20",
+    "d1": 6.927011124423782,
+    "the": 23.48,
+    "line": 29.151050238644075,
+    "margin": 5.671050238644074
+   }
+  ],
+  "flat_tower_b": 36.489999999999995,
+  "tower_a": 0.0,
+  "tower_b": 5.671050238644074,
+  "len_a": 3.0,
+  "len_b": 8.671050238644074,
+  "wg_a": 0.29478346456692917,
+  "wg_b": 0.852027410260466,
+  "conn": 1.42,
+  "g_total": 110.4331891251726,
+  "rsl_out": 13.687755270616151,
+  "rsl_in": -11.312244729383849,
+  "rsl_ref": 12.520446751427045,
+  "n": -109.9978290702777,
+  "pth": -97.7978290702777,
+  "fm": 111.48558434089385,
+  "fm_in": 86.48558434089385,
+  "fm_base": -29.76088893838937,
+  "fm_theory": {
+   "99": -9.760888938389375,
+   "99.9": 0.2391110616111085,
+   "99.99": 10.239111061606287,
+   "99.999": 20.23911106158218
+  },
+  "unreliability": 7.505034138366249e-15,
+  "fiber_len": 8.97,
+  "fiber_loss": 1.9734,
+  "micro_loss": 132.32254468602363
+ },
+ "amp": {
+  "name": "ERZIA ERZ-LNA-0800-1220-26-2",
+  "band": "8.0 to 12.2 GHz",
+  "gain": 25.0,
+  "nf": 2.2,
+  "p1db": 20.0,
+  "max_in": 10.0,
+  "max_gain": 28.0
+ }
+}

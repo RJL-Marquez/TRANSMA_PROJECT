@@ -1,0 +1,25 @@
+MATLAB 25.2.0.3360999 (R2025b) Update 7
+fc = 10.5962 GHz, lambda = 0.028292 m
+  reflectorParabolic with properties:
+
+        Exciter: [1×1 dipole]
+         Radius: 0.9000
+    FocalLength: 0.6300
+     FeedOffset: [0 0 0]
+           Tilt: 90
+       TiltAxis: [1 0 0]
+           Load: [1×1 lumpedElement]
+     SolverType: 'MoM-PO'
+
+FeedOffset = [0 0 0]
+Saved 4ECEB_Group5_Antenna.mat
+[Warning: Exported image displays axes toolbar. To remove axes toolbar from image, export again.] 
+Coarse azimuth cut done in 59.2 s, peak near az = -90 deg
+Coarse elevation cut done in 50.2 s, peak near el = 0 deg
+Fine grid done in 377.0 s
+RESULT Dmax = 42.2339 dBi at az = -90.00 deg, el = 0.00 deg
+RESULT HPBW azimuth plane = 1.1600 deg, elevation plane = 0.9200 deg
+Full cuts done in 129.0 s
+[Warning: UI components will not be included in the output. To include UI components, use the 'exportapp' function.] 
+3D pattern done in 113.3 s
+DONE

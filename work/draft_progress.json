@@ -1,0 +1,35 @@
+{
+  "site_b": "DRAFT-01, 14\u00b040'17.32\"N 120\u00b059'12.63\"E, ground 10.98 m, 5 floors (safe assumption)",
+  "D_m": 6920.35,
+  "project": "TRANSMA SHIFTED (D2 to D11 saved; D11 ground elevation not read yet: open D11, More settings, scroll to Ground elevation)",
+  "ground_m": {
+    "1": 2.54,
+    "2": 2.77,
+    "3": 2.76,
+    "4": 3.16,
+    "5": 3.76,
+    "6": 5.21,
+    "7": 6.07,
+    "8": 11.22,
+    "9": 14.61,
+    "20": 10.98,
+    "10": 13.44
+  },
+  "remaining": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "cleanup": "TRANSMA SHIFTED has an extra placemark named D7 at D6's location (14\u00b037'32.00\"N 120\u00b059'27.09\"E), listed right after D6. The correct D7 is the second one (14\u00b037'43.79\"N 120\u00b059'26.09\"E). Delete or rename the first.",
+  "method": "Reload Earth before each point; the search box takes typing only once per page load, and nothing works while the pane is hidden",
+  "notes": [
+    "D2 is near tall towers to the west (about 80 to 100 m away); check later",
+    "Two 'Untitled placemark' entries at the top of the project list may be strays from failed clicks; check before deleting"
+  ]
+}

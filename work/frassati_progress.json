@@ -1,0 +1,33 @@
+{
+  "status": "F2 to F19 saved in the TRANSMA project; BGPOP P2 to P19 hidden; floors not checked yet",
+  "method": "Ground elevation field on each saved Google Earth placemark",
+  "ground_m": {
+    "1": 2.54,
+    "2": 2.67,
+    "3": 3.35,
+    "4": 3.08,
+    "5": 3.08,
+    "6": 4.35,
+    "7": 5.77,
+    "8": 8.73,
+    "9": 14.60,
+    "10": 13.78,
+    "11": 14.09,
+    "12": 16.60,
+    "13": 17.98,
+    "14": 17.55,
+    "15": 17.53,
+    "16": 19.47,
+    "17": 19.89,
+    "18": 16.88,
+    "19": 10.43,
+    "20": 4.97
+  },
+  "floors_checked": false,
+  "check_next": [
+    "Two mid-rise towers just south of F6, close to the line",
+    "Iglesia ni Cristo CaMaNaVa just north of F11, possible spire",
+    "Tall tower between F1 and F2, east of the line",
+    "Floor counts at every F point"
+  ]
+}
