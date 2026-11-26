@@ -1,7 +1,7 @@
 # AI Use Log: ECE21129 Design Project, 4ECE-B Group 5
 
 Tool: Claude Code (Claude Opus 5.5), desktop app
-Dates: November 23 to 26, 2026
+Dates: November 23 to 26, 2026 (entries 14 to 21 on November 26)
 
 This log summarizes the prompts. Copy the exact wording from the chat if your professor needs it verbatim.
 
@@ -20,5 +20,14 @@ This log summarizes the prompts. Copy the exact wording from the chat if your pr
 | 13 | Trace Frassati to Metro Industries (84 Ramon Delfin) with 20 points placed on the tallest roofs near an even spacing, and fill the Section 2 tables | Google Earth pins M2 to M19 and LRT EDSA, `4ECEB_Group5_Report_Metro_Section2.docx` with Tables 2 to 4.1, map, overlay, and path profile | Confirm Metro Industries' floor count, P17's floor count, and the LRT-1 viaduct height in Street View; do the handwritten computations |
 | 11 | Run the MATLAB antenna simulation on the group's PC | `4ECEB_Group5_Antenna.mat`, pattern figures, Table 1 values, and the map overlay | Capture Antenna Designer screenshots if the professor wants them from the app |
 | 10 | Check the amplifier and make Frassati Option A and BGPOP Option B | Amplifier and connector update, `4ECEB_Group5_Report_OPTION_A_Frassati.docx`, `4ECEB_Group5_Report_OPTION_B_BGPOP.docx`, and `Option_A_vs_B_Comparison.md` | Recheck the computations, reword all text, and remove draft notes |
+
+| 14 | Clone the repo, then build a step-by-step solutions document for every Section 2 table | Solutions builder (`work/docgen/`), path profile script `work/section2_path_profile.py` | Check each step by hand |
+| 15 | Add a safety margin above THE | 2.5 m (one floor) margin on both antennas; masts and tilt recomputed | Group chose 2.5 m on both antennas |
+| 16 | Split the handwritten solutions among the five members | `report/4ECEB_Group5_Section2_Task_Distribution.docx` (checklist, solutions to copy, scan boxes) | Each member writes and scans their part |
+| 17 | Check Section 2 and Section 3 against the guideline PDF | Earth bulge corrected to d1·d2/(12.75k), k = 4/3; RSL taken at the Site B amplifier output; B = 2.5 MHz from the channel spacing | Group confirmed the corrections |
+| 18 | Recount Site B from Street View | Site B counted as 6 floors at the pin (5-storey building + rooftop structure); P20, mast and waveguide recomputed | Group confirmed the count |
+| 19 | Shorten the tower computations | h_B from P17 only and a 2-row clearance check instead of the 20-row and 22-row tables | None |
+| 20 | Draft Section 3 (equipment, FSL, RSL, FM) in a separate file | `report/4ECEB_Group5_Section3_DRAFT.docx`, `work/section3_calc.py`; equipment from spec sheets and the ATM waveguide table | Add the missing spec sheets, write the computations by hand, reword in the group's own words |
+| 21 | Review the group's own Section 2 paragraphs | Fixes (distance typo, 6 floors, figure numbering) and talking points; draft coordinates and notes for a point table | Group writes the final text |
 
 Not done by AI: MATLAB simulation results, handwritten computations, Introduction, Conclusion, member details, and signatures.

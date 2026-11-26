@@ -16,9 +16,12 @@ def dms(x, h):
     return f"{d}°{m:02d}'{s:05.2f}\"{h}"
 
 
+K_FACTOR = 4 / 3   # effective earth radius factor, standard atmosphere
+
+
 def pt(n, d1, ground, floors):
     d2 = DK - d1
-    bulge = d1 * d2 / 12.75
+    bulge = d1 * d2 / (12.75 * K_FACTOR)   # guideline: d1*d2/(12.75k), k = 4/3
     f1 = 17.3 * math.sqrt(d1 * d2 / (FC_GHZ * DK)) if 0 < d1 < DK else 0.0
     elev = ground + floors * 2.5
     return dict(n=n, d1=d1, d2=d2, ground=ground, floors=floors, obstruction=floors * 2.5, elev=elev,
@@ -43,7 +46,8 @@ EXTRAS = [
     extra("M", "Maranatha/PMCC tower (9 floors, corner about 5 m east of the line)", 1.6670, 4.35, 9),
     extra("L", "LRT-1 viaduct on EDSA with a train on it (about 12.5 m, taken as 5 floors)", 5.3531, 19.31, 5),
 ]
-main = link(rows, D, AMPS["A"], tilted=True, extras=EXTRAS)
+MARGIN = 2.5   # extra clearance above every THE (one floor), added to both antennas; group decision 2026-11-26
+main = link(rows, D, AMPS["A"], tilted=True, extras=EXTRAS, margin=MARGIN)
 c = common(D)
 json.dump(dict(common=c, rows=rows, main=main, alt=main, amp=AMPS["A"]),
           open(os.path.join(HERE, "results_M.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)

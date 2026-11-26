@@ -115,10 +115,14 @@ def table_named(prefix):
 t2, t3, t4 = table_named("Table 2."), table_named("Table 3."), table_named("Table 4.")
 EX = {e["name"]: e for e in M["extras"]}
 gpt = M["tilt_point"]
+MG = M["design_margin"]
+CL = {x["name"]: x["margin"] for x in M["clearance"]}
+MARGIN_TEXT = (f"Safety margin: THE already keeps 0.6F1 of the Fresnel zone and the earth bulge clear. Because the heights of P17 (4 floors) and the LRT-1 viaduct (12.5 m) are estimates, "
+               f"the design keeps an extra {MG:.1f} m (one floor) above every THE and adds {MG:.1f} m to both antenna heights.")
 
 # Table 2: keep the group's Area and coordinate rows and the Site A description
-c = cells(t2.rows[4]); set_cell(c[3], "Rooftop of the Metro Industries building, Marulas (5 storeys assumed from satellite and street imagery; to be confirmed on site)")
-c = cells(t2.rows[5]); set_cell(c[3], "5 x 2.5 m = 12.5 m")
+c = cells(t2.rows[4]); set_cell(c[3], "Roof of the 1-storey rooftop structure on the 5-storey Metro Industries building, Marulas (counted from Google Street View, May 2026)")
+c = cells(t2.rows[5]); set_cell(c[3], "(5 + 1) x 2.5 m = 15 m")
 c = cells(t2.rows[6]); set_cell(c[-1], f"{f4(C['d_km'])} km")
 c = cells(t2.rows[7]); set_cell(c[-1], "White mid-rise north of EDSA (P17, 4 floors assumed), LRT-1 viaduct on EDSA (about 12.5 m with a train, between P15 and P16), "
                                      "Maranatha/PMCC tower (9 floors, about 5 m east of the line near d1 = 1.667 km), commercial buildings near CAI Sports Center (P14), "
@@ -161,17 +165,17 @@ cur.para("Reflection question: The azimuth pattern is used for the overlay. Goog
 heading = next(p for p in d.paragraphs if p.text.strip() == "Path Profile")
 cur = Cursor(heading._p)
 cur.picture(os.path.join(HERE, "path_profile_M.png"), 6.3)
-cur.caption("Figure 2.3: Path profile showing all 20 points, THE, the near-line structures, and the tilted line of sight")
+cur.caption("Figure 2.3: Path profile showing all 20 points, THE, the near-line structures, and the tilted line of sight, with a zoom on the clearance at P17 and the LRT-1 viaduct")
 cur.para(f"Discussion: The ground rises from about 2.5 m near UST to about 20 m around EDSA (P16 and P17), drops to {ROWS[18]['ground']:.2f} m at the Tullahan River (P19), "
          f"and rises again to {ROWS[-1]['ground']:.2f} m at Site B. The dashed red line is the tilted line of sight from {f4(M['h_ant_a'])} m at Frassati to {f4(M['h_ant_b'])} m at Metro Industries. "
-         "It stays at or above THE at every point and at both near-line structures. It just touches the THE of P17 and passes 0.17 m above the THE of the LRT-1 viaduct.")
+         f"It stays at least {MG:.1f} m (the safety margin) above THE at every point and at both near-line structures: {CL['P17']:.4f} m above the THE of P17 and {CL['L']:.4f} m above the THE of the LRT-1 viaduct.")
 
 # Sample computation and near-line check after Table 3
 p = ROWS[16]
 cur = Cursor(t3._tbl)
 cur.para("Sample computation at the highest intermediate point (P17)", bold=True)
 cur.para(f"helevation = {p['ground']:.2f} + {p['floors']}(2.5) = {f4(p['elev'])} m")
-cur.para(f"hearth bulge = d1d2 / 12.75 = ({f4(p['d1'])})({f4(p['d2'])}) / 12.75 = {f4(p['bulge'])} m")
+cur.para(f"hearth bulge = d1d2 / (12.75k) = ({f4(p['d1'])})({f4(p['d2'])}) / [12.75(4/3)] = {f4(p['bulge'])} m")
 cur.para(f"F1 = 17.3√[d1d2 / (f(d1 + d2))] = 17.3√[({f4(p['d1'])})({f4(p['d2'])}) / (10.59625 × {f4(C['d_km'])})] = {f4(p['f1'])} m")
 cur.para(f"0.6F1 = 0.6({f4(p['f1'])}) = {f4(p['f60'])} m")
 cur.para(f"THE = {f4(p['elev'])} + {f4(p['bulge'])} + {f4(p['f60'])} = {f4(p['the'])} m")
@@ -183,23 +187,24 @@ for key in ("M", "L"):
 # Tower computation after Table 4
 cur = Cursor(t4._tbl)
 cur.para("Tilted antenna mounting (guideline Part 3, item 9)", bold=True)
-cur.para(f"With equal antenna heights, both antennas would sit at the maximum THE of {f4(M['hmin'])} m (P1), which needs a {f4(M['flat_tower_b'])} m tower at Site B. "
-         "The antennas are instead mounted at an angle, keeping line of sight and clearance from every THE.")
-cur.para(f"Site A antenna height: hA = THE at P1 = {f4(M['h_ant_a'])} m, so htower,A = {f4(M['h_ant_a'])} - {f4(ROWS[0]['elev'])} = {f4(M['tower_a'])} m")
-cur.para("For each point, the straight line from Site A must stay at or above THE: hA - (hA - hB)(d1 / D) ≥ THE, so hB ≥ hA - (hA - THE)(D / d1).")
-cur.para(f"The largest required hB is at {gpt['name']}: hB = {f4(M['h_ant_a'])} - ({f4(M['h_ant_a'])} - {f4(gpt['the'])})({f4(C['d_km'])} / {f4(gpt['d1'])}) = {f4(M['h_ant_b'])} m")
+cur.para(MARGIN_TEXT)
+cur.para(f"With equal antenna heights, both antennas would sit at the maximum THE of {f4(M['hmin'])} m (P1) plus the margin, {f4(M['hmin'] + MG)} m, which needs a {f4(M['flat_tower_b'])} m tower at Site B. "
+         "The antennas are instead mounted at an angle, keeping line of sight and the margin above every THE.")
+cur.para(f"Site A antenna height: hA = THE at P1 + {MG:.1f} = {f4(M['hmin'])} + {f4(MG)} = {f4(M['h_ant_a'])} m, so htower,A = {f4(M['h_ant_a'])} - {f4(ROWS[0]['elev'])} = {f4(M['tower_a'])} m")
+LV = next(x for x in M["clearance"] if x["name"] == "L")
+OTHER = min((x for x in M["clearance"] if x["name"] not in ("P1", "P20", gpt["name"], "L")), key=lambda x: x["margin"])
+cur.para(f"The tilted line must stay at least {MG:.1f} m above THE at every point: hA - (hA - hB)(d1 / D) ≥ THE + {MG:.1f}, so hB ≥ hA - (hA - THE - {MG:.1f})(D / d1). "
+         f"The path profile (Figure 2.3) shows that the line comes closest to THE at {gpt['name']}, so {gpt['name']} sets hB:")
+cur.para(f"hB = {f4(M['h_ant_a'])} - ({f4(M['h_ant_a'])} - {f4(gpt['the'])} - {f4(MG)})({f4(C['d_km'])} / {f4(gpt['d1'])}) = {f4(M['h_ant_b'])} m")
 cur.para(f"htower,B = {f4(M['h_ant_b'])} - {f4(ROWS[-1]['elev'])} = {f4(M['tower_b'])} m")
 cur.para(f"Tilt angle = tan⁻¹[(hA - hB) / D] = tan⁻¹[({f4(M['h_ant_a'])} - {f4(M['h_ant_b'])}) / {C['d_m']:.2f}] = {M['tilt_deg']:.4f}°, downward at Site A and upward at Site B")
+cur.para(f"Check at the next-closest structure, the LRT-1 viaduct (d1 = {f4(LV['d1'])} km): line of sight = hA - (hA - hB)(d1 / D) = {f4(M['h_ant_a'])} - ({f4(M['h_ant_a'] - M['h_ant_b'])})({f4(LV['d1'])} / {f4(C['d_km'])}) = {f4(LV['line'])} m, "
+         f"so its clearance is {f4(LV['line'])} - {f4(LV['the'])} = {f4(LV['margin'])} m, above the {MG:.1f} m margin. Every other point clears THE by {f4(OTHER['margin'])} m or more ({OTHER['name']} is the next closest), as Figure 2.3 shows.")
 cur.para(f"Justification: the ANDREW VHLP6-11W/A antenna mount has a ±5° fine elevation adjustment, so a {M['tilt_deg']:.4f}° tilt is within its range. "
          "The tilt is also smaller than half of the antenna's vertical beamwidth (1° on the specification sheet, 0.9200° simulated), and each antenna is aimed directly at the other.")
-data = [["Point", "d1 (km)", "THE (m)", "Line of sight (m)", "Clearance above THE (m)"]]
-for c_ in M["clearance"]:
-    data.append([c_["name"], f4(c_["d1"]), f4(c_["the"]), f4(c_["line"]), f4(c_["margin"])])
-cur.table(data, [0.6, 1.1, 1.3, 1.6, 1.9])
-cur.caption("Table 4.1. Clearance of the tilted line of sight at all 20 points and the two near-line structures (M: Maranatha/PMCC tower, L: LRT-1 viaduct)")
-cur.para(f"Discussion: Site A needs no added tower, only a rooftop mount on the Frassati Building. Site B needs a {f4(M['tower_b'])} m mast on the Metro Industries rooftop instead of a {f4(M['flat_tower_b'])} m tower. "
-         "P17 sets the tilt because the line of sight just touches its THE; the LRT-1 viaduct is the next closest at 0.17 m. "
-         "Both heights are estimates (P17 at 4 floors, the viaduct with a train at 12.5 m), taken on the high side, so the real clearance should be larger.")
+cur.para(f"Discussion: Site A needs a {f4(M['tower_a'])} m mast on the Frassati rooftop and Site B a mast of {f4(M['tower_b'])} m on the Metro Industries rooftop, instead of a {f4(M['flat_tower_b'])} m tower. "
+         f"P17 sets the tilt because the line of sight passes exactly {CL['P17']:.4f} m (the safety margin) above its THE; the LRT-1 viaduct is the next closest at {CL['L']:.4f} m. "
+         "Both heights are estimates (P17 at 4 floors, the viaduct with a train at 12.5 m), so the margin covers either one being about one floor taller.")
 
 d.save(DST)
 print("saved", DST)

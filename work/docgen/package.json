@@ -1,0 +1,6 @@
+{
+  "name": "transma-docgen",
+  "private": true,
+  "description": "Builds the Section 2 task distribution doc and the Section 3 draft",
+  "dependencies": { "docx": "9.5.1" }
+}

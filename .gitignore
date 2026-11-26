@@ -2,3 +2,5 @@
 __pycache__/
 ~$*
 *.tmp
+node_modules/
+work/docgen/sec2_steps.json

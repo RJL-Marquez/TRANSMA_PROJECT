@@ -29,22 +29,23 @@ def common(D):
                 wg_db_m=WG, d_m=D, d_km=D / 1000, fc=FC_GHZ)
 
 
-def link(rows, D, amp, tilted=False, extras=()):
+def link(rows, D, amp, tilted=False, extras=(), margin=0.0):
+    """margin: extra clearance (m) kept above every THE, added to both antenna heights."""
     c = common(D)
     hmin = max(r["the"] for r in rows)
     gov = max(rows, key=lambda r: r["the"])["n"]
     dkm = D / 1000
     if tilted:
-        # Site A antenna stays at its THE; Site B is lowered until the straight line just clears every THE
-        ha = rows[0]["the"]
+        # Site A antenna sits at its THE + margin; Site B is lowered until the straight line stays margin above every THE
+        ha = rows[0]["the"] + margin
         pts_ = [dict(name=f"P{r['n']}", d1=r["d1"], the=r["the"]) for r in rows[1:-1]] + [dict(name=e["name"], d1=e["d1"], the=e["the"]) for e in extras]
-        need = [(ha - (ha - q["the"]) * dkm / q["d1"], i) for i, q in enumerate(pts_)]
+        need = [(ha - (ha - q["the"] - margin) * dkm / q["d1"], i) for i, q in enumerate(pts_)]
         hb, idx = max(need)
         tpoint = pts_[idx]
-        if hb < rows[-1]["the"]:
-            hb, tpoint = rows[-1]["the"], dict(name="P20", d1=rows[-1]["d1"], the=rows[-1]["the"])
+        if hb < rows[-1]["the"] + margin:
+            hb, tpoint = rows[-1]["the"] + margin, dict(name="P20", d1=rows[-1]["d1"], the=rows[-1]["the"])
     else:
-        ha = hb = hmin
+        ha = hb = hmin + margin
         tpoint = dict(name=f"P{gov}", d1=rows[gov - 1]["d1"], the=hmin)
     line = [ha + (hb - ha) * r["d1"] / dkm for r in rows]
     clearance = [dict(name=f"P{r['n']}", d1=r["d1"], the=r["the"], line=h, margin=h - r["the"]) for r, h in zip(rows, line)]
@@ -52,7 +53,7 @@ def link(rows, D, amp, tilted=False, extras=()):
         h = ha + (hb - ha) * e["d1"] / dkm
         clearance.append(dict(name=e["name"], d1=e["d1"], the=e["the"], line=h, margin=h - e["the"]))
     clearance.sort(key=lambda x: x["d1"])
-    assert all(x["margin"] > -1e-9 for x in clearance)
+    assert all(x["margin"] > margin - 1e-9 for x in clearance)
     tilt = math.degrees(math.atan(abs(ha - hb) / D))
     ta, tb = ha - rows[0]["elev"], hb - rows[-1]["elev"]
     la, lb = ta + HORIZ, tb + HORIZ
@@ -67,7 +68,7 @@ def link(rows, D, amp, tilted=False, extras=()):
     theo = {str(r): base - db(1 - r / 100) for r in (99, 99.9, 99.99, 99.999)}
     fib = ROAD + (rows[0]["obstruction"] + rows[-1]["obstruction"]) / 1000
     return dict(hmin=hmin, governing=gov, tilted=tilted, h_ant_a=ha, h_ant_b=hb, tilt_point=tpoint, extras=list(extras), tilt_deg=tilt,
-                clearance=clearance, flat_tower_b=hmin - rows[-1]["elev"], tower_a=ta, tower_b=tb, len_a=la, len_b=lb, wg_a=wa, wg_b=wb, conn=CONN,
+                clearance=clearance, flat_tower_b=hmin + margin - rows[-1]["elev"], design_margin=margin, tower_a=ta, tower_b=tb, len_a=la, len_b=lb, wg_a=wa, wg_b=wb, conn=CONN,
                 g_total=gt, rsl_out=rsl, rsl_in=rsl - amp["gain"], rsl_ref=ref, n=n, pth=pth, fm=fm,
                 fm_in=fm - amp["gain"], fm_base=base, fm_theory=theo, unreliability=10 ** ((base - fm) / 10),
                 fiber_len=fib, fiber_loss=fib * FIBER, micro_loss=c["fsl"] + wa + wb + CONN)

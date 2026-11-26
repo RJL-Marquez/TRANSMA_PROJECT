@@ -4,7 +4,7 @@ User asked to keep these guideline rules (pages 8-9) in mind for Section 2.
 - Site A must be on top of a UST Manila campus building; Site B in the assigned area. Measure straight-line distance. Overlay the radiation pattern on the map, aimed at the other antenna.
 - Use **20 points** on the straight line: 2 sites + 18 between. Favor obviously tall infrastructure while keeping spacing relatively even.
 - h_elevation = h_earth contour (Google Earth soil height) + h_obstruction (floors × 2.5 m, since Philippine buildings are not 3D)
-- h_earth bulge = d1·d2 / (12.75), d in km, k = 4/3
+- h_earth bulge = d1·d2 / (12.75k), d in km, k = 4/3 (so the divisor is 17)
 - F1 = 17.3·sqrt(d1·d2 / (f·(d1+d2))), f in GHz; clearance = 0.6·F1
 - THE = h_elevation + h_earth bulge + 0.6·F1
 - h_antenna(min) = maximum THE of all 20 points; h_tower = h_antenna(min) − h_elevation at each site
